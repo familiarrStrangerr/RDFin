@@ -1,0 +1,13 @@
+# ignore local environment and secret files
+.env
+*.env
+.env.local
+secrets/
+rd-strm_data/
+*.pem
+*.key
+.git
+.gitignore
+.vscode
+node_modules
+.DS_Store

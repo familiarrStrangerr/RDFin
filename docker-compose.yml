@@ -1,0 +1,18 @@
+services:
+  rdfin-web:
+    image: familiarrstrangerr/rdfin-web:latest
+    container_name: rdfin_web
+    env_file:
+      - .env
+    environment:
+      - FLASK_SECRET=${FLASK_SECRET}
+      - REALDEBRID_TOKEN=${REALDEBRID_TOKEN}
+    volumes:
+      # mount where your Jellyfin scans for media (host : container)
+      - /path/to/jellyfin/media/Movies:/media/movies:rw
+      - /path/to/jellyfin/media/TV_Shows:/media/tv:rw
+      # mount for logs (outside of media root)
+      - ./rdfin_data:/fetch_logs:rw
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
