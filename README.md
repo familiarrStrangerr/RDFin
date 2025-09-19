@@ -1,8 +1,6 @@
 ````markdown
 # RDfin
 
-![RDfin Logo](app/static/logo.png)
-
 **RDfin** is a lightweight self-hosted web service that integrates [Real-Debrid](https://real-debrid.com/) with [Jellyfin](https://jellyfin.org/).  
 It generates `.strm` files from Real-Debrid links so you can stream cached content directly in Jellyfin, without downloading large files locally.
 
